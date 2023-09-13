@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import './Profile.module.css';
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className="profile">
+    <div className={clsx('profile')}>
       <div className="description">
         <img src={avatar} alt={username} className="avatar" />
         <p className="name">{username}</p>
@@ -26,16 +28,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     </div>
   );
 };
+
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired
-  ).isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };

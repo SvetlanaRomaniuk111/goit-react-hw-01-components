@@ -17,10 +17,10 @@ export const Statistics = props => {
     </section>
   );
 };
+
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
