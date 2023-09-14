@@ -1,0 +1,32 @@
+table {
+  table-layout: fixed;
+  border: 1px solid rgb(210, 210, 210);
+  width: 60%;
+  margin: 60px auto;
+  padding: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+  background-color: rgb(73, 212, 219);
+}
+
+th,
+td {
+  border-right: 1px solid white;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+td {
+  border: solid 1px rgb(223, 223, 223);
+  color: grey;
+  text-transform: capitalize;
+}
+tr:nth-child(even) {
+  background-color: rgb(237, 246, 246);
+}

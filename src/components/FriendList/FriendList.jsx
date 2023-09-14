@@ -6,7 +6,9 @@ export const FriendList = props => {
       {props.friends.map(({ id, avatar, name, isOnline }) => {
         return (
           <li className={css.item} key={id}>
-            <span className={css.status}>{isOnline}</span>
+            <span
+              className={`${css.status} ${isOnline ? css.online : css.offline}`}
+            ></span>
             <img
               className={css.avatar}
               src={avatar}

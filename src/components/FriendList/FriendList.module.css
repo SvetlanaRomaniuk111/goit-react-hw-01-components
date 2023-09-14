@@ -7,18 +7,26 @@
   align-items: center;
   margin-bottom: 20px;
   background-color: rgb(251, 251, 250);
-  width: 240px;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .status {
   width: 15px;
   height: 15px;
   margin-right: 15px;
   border-radius: 50%;
-  /* background-color: ${props => (props.statusType ? 'green' : 'red')}; */
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
 }
 
 .avatar {
